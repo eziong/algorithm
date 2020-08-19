@@ -4,13 +4,11 @@
 using namespace std;
 
 
-class Disassembly{
-    int arr[1000001];
-public:
-    Disassembly();
-    int construct(int n);
-};
-Disassembly::Disassembly(){
+int arr[1000001];
+
+int main(){
+    int n;
+    cin >> n;
     for(int i = 0;i<1000001;i++) {arr[i] = 0;}
     for(int i = 0;i<1000001;i++){
         int sum = i;
@@ -23,14 +21,6 @@ Disassembly::Disassembly(){
             if(arr[sum]==0 || arr[sum]>i){arr[sum] = i;}
         }
     }
-}
-int Disassembly::construct(int n){
     cout << arr[n] << endl;
-}
-int main(){
-    Disassembly d;
-    int n;
-    cin >> n;
-    d.construct(n);
     return 0;
 }
